@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Nerdshoe</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="MainPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Framework\" />
+    <Folder Include="Effects\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Framework\ListViewSortingEffect.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Toolkit\Nerdshoe.Toolkit.csproj" />
+  </ItemGroup>
+</Project>
